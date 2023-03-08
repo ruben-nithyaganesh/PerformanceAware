@@ -25,18 +25,6 @@ void DecodeInstruction(unsigned char Byte1, unsigned char Byte2, FILE* DecodedAs
     unsigned char Reg = (Byte2 & REG_MASK) >> 3;
     unsigned char RM = Byte2 & RM_MASK;
 
-    /*
-    printf("Inst: %u\n", Instruction);
-    printf("D: %u\n", D);
-    printf("W: %u\n", W);
-    printf("Mod: %u\n", Mod);
-    printf("Reg: %u\n", Reg);
-    printf("RM: %u\n", RM);
-
-    printf("Reg Instruction: %s\n", REG_TABLE[W][Reg]);
-    printf("R/M Instruction: %s\n", REG_TABLE[W][RM]);
-    */
-
     char *DecodedInstruction = (char *) malloc(20);
 
     if(D)
